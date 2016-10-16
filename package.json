@@ -1,0 +1,40 @@
+{
+  "name": "byetimesheets",
+  "author": "Malcolm Kane and Jenny Kay Pollock",
+  "description": "Prototype for the Bye Timesheets product",
+  "license": "ISC",
+  "version": "0.1.0",
+  "main": "src/app.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkane827/byetimesheets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkane827/byetimesheets/issues"
+  },
+  "homepage": "https://github.com/mkane827/byetimesheets#readme",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "html-webpack-plugin": "^2.22.0",
+    "node-sass": "^3.10.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
