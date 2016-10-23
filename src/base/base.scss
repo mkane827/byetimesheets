@@ -16,4 +16,48 @@
     padding: 20px;
     border-radius: 30px;
   }
+
+  button {
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    background: transparent;
+    border: solid 2px white;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+}
+
+.Jobs {
+  margin-top: 20px;
+}
+
+.Job {
+  display: inline-block;
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+  background: transparent;
+
+  .circle {
+    border: solid 3px white;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .selected {
+    .circle {
+      background: #40C169;
+    }
+  }
+
+  p {
+    padding: 10px;
+  }
 }
