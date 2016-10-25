@@ -21,8 +21,7 @@ export default React.createClass({
       name: this.refs.addJob.value,
       time: 0,
       id: id,
-      stamp: id, // only initialized to id
-      click: this.selectJob(id)
+      stamp: id // only initialized to id
     });
     this.setState({ jobs: jobs });
     syncJobs(jobs);
@@ -35,8 +34,17 @@ export default React.createClass({
   filterJobs: function(e) {
     this.setState({jobsFilter: e.target.value});
   },
-  selectJob: (id) => () => {
-    console.log(this, id);
+  selectJob: function(id) {
+    const jobs = this.state.jobs;
+    jobs.forEach(job => {
+      if(job.id === id) {
+        job.selected = !job.selected;
+      } else {
+        job.selected = false;
+      }
+    });
+    this.setState({ jobs: jobs })
+    syncJobs(jobs);
   },
   render() {
     return (
@@ -58,7 +66,8 @@ export default React.createClass({
         </button>
 
         <JobList jobs={this.state.jobs}
-            filter={this.state.jobsFilter}></JobList>
+            filter={this.state.jobsFilter}
+            selectJob={this.selectJob}></JobList>
       </div>
 
     );
