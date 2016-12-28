@@ -1,1 +1,3 @@
 byetimesheets.*
+/node_modules
+/dist
